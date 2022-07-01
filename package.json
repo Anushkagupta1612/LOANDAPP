@@ -22,7 +22,10 @@
   },
   "dependencies": {
     "@chainlink/contracts": "^0.4.1",
+    "@nomiclabs/hardhat-etherscan": "^3.1.0",
     "@openzeppelin/contracts": "^4.7.0",
-    "dotenv": "^16.0.1"
+    "dotenv": "^16.0.1",
+    "eth-rpc-errors": "^4.0.3",
+    "etherscan-api": "^10.1.0"
   }
 }

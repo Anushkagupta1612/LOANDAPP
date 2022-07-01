@@ -17,4 +17,5 @@ contract Token is ERC20, ERC20Burnable, Ownable {
     }
 }
 
-// 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4
+// 0x11EB627563197CAB34668f9353F0dB72627BfC91
+// https://rinkeby.etherscan.io/address/0x11EB627563197CAB34668f9353F0dB72627BfC91#code
