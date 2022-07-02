@@ -28,12 +28,10 @@ contract Lend is DataBase,Token {
 
     function entryToDatabase( uint _collateral ) public payable
     {
-        // console.log(DB[msg.sender].collateral);
-        uint to_lend = uint(getLatestPrice())/(10**8);
-        to_lend = to_lend * (_collateral);
+        uint to_lend = (_collateral) * uint(getLatestPrice())/(10**8) * (10**10);
         mint(msg.sender, uint(to_lend));
-        DB[msg.sender].amount += to_lend;
-        DB[msg.sender].collateral += _collateral;
+        DB[msg.sender].amount += msg.value*(uint(getLatestPrice())/(10**8));
+        DB[msg.sender].collateral += msg.value;
         emit DepositEvent(DB[msg.sender]);
     }
 

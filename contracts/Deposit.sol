@@ -12,7 +12,7 @@ contract Deposit is DataBase,Token,Lend {
     {    
         require(int(_amount) <= int(balanceOf(msg.sender)));
         require(int(_amount) <= int(DB[msg.sender].amount));
-        burn(msg.sender,_amount);
+        burn(msg.sender,_amount*(10**18));
         DB[msg.sender].amount -= _amount;
         uint SendHimBack = _amount / (uint(getLatestPrice())/(10**8));
         payable(msg.sender).transfer(SendHimBack);
